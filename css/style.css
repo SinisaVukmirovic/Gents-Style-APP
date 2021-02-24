@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     font-size: 18px;
 }
 
@@ -26,14 +26,16 @@ a {
 }
 
 header {
-    position: fixed;
-    top: 0;
+    /* position: fixed;
+    top: 0; */
     width: 100%;
     background-color: #111;
     display: grid;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
     align-items: center;
+
+    height: 10vh;
 }
     h1 {
         word-spacing: -10px;
@@ -54,9 +56,11 @@ header {
 
 main {
     scroll-behavior: smooth;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: auto;
     scroll-snap-type: y mandatory;
+
+    height: 90vh;
 }
 
 section {
