@@ -69,9 +69,9 @@ section {
     section:nth-child(2) .category {background-color: purple;}
     section:nth-child(3) .category {background-color: royalblue;}
 
-    section:nth-child(1) .slider {background: radial-gradient(coral 30%, #242424 30%);}
-    section:nth-child(2) .slider {background-image: radial-gradient();}
-    section:nth-child(3) .slider {background-image: radial-gradient();}
+    section:nth-child(1) .slider {background-image: radial-gradient(#222 30%, darkcyan 30%);}
+    section:nth-child(2) .slider {background-image: radial-gradient(#222 30%, purple 30%);}
+    section:nth-child(3) .slider {background-image: radial-gradient(#222 30%, royalblue 30%);}
 
     /* section .category,
     section .slider {
@@ -88,13 +88,18 @@ section {
         writing-mode: vertical-lr;
         text-orientation: upright;
     }
+        .category h2 {
+            transform: rotate(-5deg);
+            /* font-size: 4rem;
+            letter-spacing: -30px; */
+        }
 
     section .slider {
+        transform: translateX(0);
         overflow: hidden;
         display: inline-flex;
         justify-content: center;
         align-items: center;
     }
-        .slider img {
-            height: 40vh;
-        }
+
+    /* FIGURE OUT HOW TO SETUP SLIDES */
