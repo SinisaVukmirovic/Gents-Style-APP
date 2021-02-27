@@ -112,6 +112,7 @@ section {
         }
             .item img {
                 max-height: 40%;
+                transition: transform 300ms ease-in-out;
             }
 
 @media screen and (max-width: 414px) {

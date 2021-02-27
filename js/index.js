@@ -1,10 +1,11 @@
 const app = document.querySelector('.app');
-const slider = app.querySelector('.slider');
-const items = [
-    Array.from(app.querySelectorAll('#vests .slider .item')),
-    Array.from(app.querySelectorAll('#cardigans .slider .item')),
-    Array.from(app.querySelectorAll('#watches .slider .item')),
-];
+// const slider = app.querySelector('.slider');
+// const items = [
+//     Array.from(app.querySelectorAll('#vests .slider .item')),
+//     Array.from(app.querySelectorAll('#cardigans .slider .item')),
+//     Array.from(app.querySelectorAll('#watches .slider .item')),
+// ];
+const vestsSlider = app.document.querySelector('#vests');
 
 let isDragged = false;
 let startPosition = 0;
@@ -16,7 +17,7 @@ let currentSlide = 0;
 const touchStart = index => {
     return event => {
         currentSlide = index;
-        checking if its a mouse or finger touch / desktop or mobile
+        
         startPosition = getPositionX(event);
 
         isDragged = true;
@@ -44,28 +45,29 @@ const setSliderPosition = () => {
 }
 
 const touchEnd = () => {
-    // isDragged = false;
-    // cancelAnimationFrame(animationID);
-
-    // const movedBy = currentTranslate - previousTranslate;
-    // if (movedBy < -100 && currentSlide < slides.length - 1) currentSlide += 1;
-    // if (movedBy > 100 && currentSlide > 0) currentSlide -= 1;
-
-    // setPositionByIndex();
-    
-    // slider.classList.remove('grabbed');
-
-    // ==================
     isDragged = false;
+    cancelAnimationFrame(animationID);
+
+    const movedBy = currentTranslate - previousTranslate;
+    if (movedBy < -100 && currentSlide < slides.length - 1) currentSlide += 1;
+    if (movedBy > 100 && currentSlide > 0) currentSlide -= 1;
+
+    setPositionByIndex();
+    
+    slider.classList.remove('grabbed');
+}
+
+const setPositionByIndex = () => {
+    currentTranslate = currentSlide * -window.innerWidth;
+    previousTranslate = currentTranslate;
+
+    setSliderPosition();
 }
 
 const touchMove = event => {
     if (isDragged) {
-        // const currentPosition = getPositionX(event); 
-        // currentTranslate = previousTranslate + currentPosition - startPosition;
-
-        // =================
-        console.log('move');
+        const currentPosition = getPositionX(event); 
+        currentTranslate = previousTranslate + currentPosition - startPosition;
     }
 }
 
