@@ -1,11 +1,11 @@
 const app = document.querySelector('.app');
-// const slider = app.querySelector('.slider');
+const slider = app.querySelector('.slider');
 // const items = [
 //     Array.from(app.querySelectorAll('#vests .slider .item')),
 //     Array.from(app.querySelectorAll('#cardigans .slider .item')),
 //     Array.from(app.querySelectorAll('#watches .slider .item')),
 // ];
-const vestsSlider = app.document.querySelector('#vests');
+const vests = slider.querySelectorAll('.item');
 
 let isDragged = false;
 let startPosition = 0;
@@ -49,7 +49,7 @@ const touchEnd = () => {
     cancelAnimationFrame(animationID);
 
     const movedBy = currentTranslate - previousTranslate;
-    if (movedBy < -100 && currentSlide < slides.length - 1) currentSlide += 1;
+    if (movedBy < -100 && currentSlide < vests.length - 1) currentSlide += 1;
     if (movedBy > 100 && currentSlide > 0) currentSlide -= 1;
 
     setPositionByIndex();
@@ -58,7 +58,8 @@ const touchEnd = () => {
 }
 
 const setPositionByIndex = () => {
-    currentTranslate = currentSlide * -window.innerWidth;
+    // currentTranslate = currentSlide * -window.innerWidth;
+    currentTranslate = currentSlide * -slider.clientWidth;
     previousTranslate = currentTranslate;
 
     setSliderPosition();
@@ -71,8 +72,9 @@ const touchMove = event => {
     }
 }
 
-items.forEach(category => {
-    category.forEach((item, index) => {
+// items.forEach(category => {
+//     category.forEach((item, index) => {
+    vests.forEach((item, index) => {
         // preventing the default behavious of click and drag an image
         const slideImage = item.querySelector('img');
         slideImage.addEventListener('dragstart', e => e.preventDefault());
@@ -88,7 +90,7 @@ items.forEach(category => {
         item.addEventListener('mouseleave', touchEnd);
         item.addEventListener('mousemove', touchMove);
     });
-});
+// });
 
 window.oncontextmenu = function(e) {
     e.preventDefault();
