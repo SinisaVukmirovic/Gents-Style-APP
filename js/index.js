@@ -21,7 +21,6 @@ const touchStart = index => {
         startPosition = getPositionX(event);
 
         isDragged = true;
-        console.log('start');
 
         animationID = requestAnimationFrame(slideAnimation);
 
