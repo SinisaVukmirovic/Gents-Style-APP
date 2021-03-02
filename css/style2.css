@@ -69,8 +69,11 @@ section {
     grid-template-columns: 1fr 4fr;
 
     /* background-color: darkcyan; */
-    background-image: radial-gradient(#222 25%, darkcyan 0);
+    background-image: radial-gradient(circle, #222 25%, darkcyan 25%);
     background-position: 100px 50px;
+
+    /* background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba(6,5,29,1) 18%, rgba(10,10,22,1) 18%, rgba(37,94,106,1) 18%, rgba(24,21,68,1) 18%); */
 }
     
     /* section:nth-child(1) .category {background-color: darkcyan;}
