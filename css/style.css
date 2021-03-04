@@ -69,12 +69,19 @@ section {
     grid-template-columns: 1fr 4fr;
 
     /* background-color: darkcyan; */
-    background-image: radial-gradient(circle, #222 25%, darkcyan 25%);
-    background-position: 100px 50px;
+    /* background-image: radial-gradient(circle, #222 25%, darkcyan 25%); */
+    /* background-position: 100px 50px; */
 
     /* background: rgb(2,0,36);
 background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba(6,5,29,1) 18%, rgba(10,10,22,1) 18%, rgba(37,94,106,1) 18%, rgba(24,21,68,1) 18%); */
+    /* background-image: radial-gradient(circle, #ef233c 10rem, #d90429 10rem); */
+    background-image: radial-gradient(circle, #a11d33 10rem, #85182a 10rem);
+
 }
+
+section#vests {background-image: radial-gradient(circle, #a11d33 10rem, #85182a 10rem);}
+section#cardigans {background-image: radial-gradient(circle, #1780a1 10rem, #2e6f95 10rem);}
+section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c41 143642);}
     
     /* section:nth-child(1) .category {background-color: darkcyan;}
     section:nth-child(2) .category {background-color: purple;}
@@ -90,8 +97,11 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
         writing-mode: vertical-lr;
         text-orientation: upright;
 
-        background-color: red;
+        /* background-color: #d90429; */
         z-index: 11;
+
+        /* background-image: radial-gradient(circle, #ef233c 25%, #d90429 25%); */
+        
     }
         .category h2 {
             transform: rotate(-5deg);
@@ -111,7 +121,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
         /* display: flex;
         flex-wrap: nowrap;
         justify-content: center;
-        align-items: center; */
+        align-items: center; */        
     }
         .slider .item {
             min-width: 100%;
@@ -123,7 +133,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
         }
             .item img {
                 max-height: 40%;
-                transition: transform 300ms ease-in-out;
+                transition: transform 200ms ease-in-out;
             }
             .slider.grabbed {
                 cursor: grabbing;
