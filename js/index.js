@@ -1,3 +1,7 @@
+// import { bbooddyy } from './cards.js';
+
+// console.log(bbooddyy);
+
 const app = document.querySelector('.app');
 const slider = app.querySelector('.slider');
 // const items = [

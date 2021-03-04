@@ -106,7 +106,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
         /* overflow: hidden; */
         display: inline-flex;
         transform: translateX(0);
-        transition: transform 300ms ease-in-out;
+        transition: transform 600ms ease-in-out;
         cursor: grab;
         /* display: flex;
         flex-wrap: nowrap;
@@ -124,6 +124,12 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
             .item img {
                 max-height: 40%;
                 transition: transform 300ms ease-in-out;
+            }
+            .slider.grabbed {
+                cursor: grabbing;
+            }
+            .slider.grabbed img {
+                transform: scale(.95);
             }
 
 @media screen and (max-width: 414px) {
