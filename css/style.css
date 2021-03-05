@@ -19,7 +19,7 @@ header {
     top: 0;
     z-index: 111;
     width: 99%;
-    background-color: #111;
+    background-color: #222;
     display: grid;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
@@ -84,7 +84,14 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
 }
 
 section#vests {
-    background-image: radial-gradient(circle at 60%, #1c2e4a 20%, #23395d 20%, #203354);
+    background-image: radial-gradient(circle at 60% 60%, #1f2535 20%, #26354a 20%, #080a0e);
+}
+section#cardigans {
+    background-image: radial-gradient(circle at 60% 60%, #7e122a 20%, #9c203a 20%, #4e0916);
+    /* background-image: radial-gradient(circle at 60%, #1c2e4a 20%, #23395d 20%, #203354); */
+}
+section#watches {
+    background-image: radial-gradient(circle at 60% 60%, #224a5e 20%, #286987 20%, #0c1d25);
 }
 /* section#vests {background-image: radial-gradient(circle, red 20%, pink 20%, purple);} */
 /* section#cardigans {background-image: radial-gradient(circle, #1780a1 10rem, #2e6f95 10rem);}
@@ -108,12 +115,14 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
         z-index: 11;
 
         /* background-image: radial-gradient(circle, #ef233c 25%, #d90429 25%); */
+
+       
         
     }
         .category h2 {
             transform: rotate(-5deg);
             /* font-size: 4rem;
-            letter-spacing: -30px; */
+            letter-spacing: -30px; */ 
         }
 
     section .slider {
