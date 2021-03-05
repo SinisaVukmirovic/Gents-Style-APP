@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+.category h2 {
+    font-family: Tangerine, cursive;
+    font-size: 8rem;
+}
+
+
+
+@media screen and (max-width: 414px) {
+    .category h2 {
+        font-size: 4rem;
+    }
+}
