@@ -93,18 +93,18 @@ background: radial-gradient(circle, rgba(2,0,36,1) 18%, rgba(7,7,27,1) 18%, rgba
 }
 
 section#vests {
-    background-image: radial-gradient(circle at 50% 50%, #1f2535 30%, #26354a 20%, #10141b);
+    background-image: radial-gradient(circle at 50% 55%, #1f2535 35%, #26354a 20%, #10141b);
 }
 section#vests .category {background-color: #1f2535;}
 
 section#cardigans {
-    background-image: radial-gradient(circle at 50% 50%, #7e122a 30%, #9c203a 20%, #4e0916);
+    background-image: radial-gradient(circle at 50% 55%, #7e122a 35%, #9c203a 20%, #4e0916);
     /* background-image: radial-gradient(circle at 60%, #1c2e4a 20%, #23395d 20%, #203354); */
 }
 section#cardigans .category {background-color: #7e122a;}
 
 section#watches {
-    background-image: radial-gradient(circle at 50% 50%, #265c77 30%, #2b7ba0 20%, #113344);
+    background-image: radial-gradient(circle at 50% 55%, #265c77 35%, #2b7ba0 20%, #113344);
 }
 section#watches .category {background-color: #265c77;}
 /* section#vests {background-image: radial-gradient(circle, red 20%, pink 20%, purple);} */
@@ -121,7 +121,7 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     section .category {
         width: 100vw;
 
-    height: 20vh;
+    height: 15vh;
 
         order: 2;
         display: flex;
@@ -150,7 +150,7 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
 
     section .slider {
         width: 100vw;
-    height: 80vh;
+    height: 85vh;
 
         order: 1;
         /* background-attachment: fixed; */
@@ -172,10 +172,12 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
             display: flex;
             justify-content: center;
             align-items: center;
+            /* align-items: flex-end; */
+            padding-top: 20%; 
             user-select: none;
         }
             .item img {
-                max-height: 40%;
+                height: 40vh;
                 transition: transform 200ms ease-in-out;
             }
             .slider.grabbed {
@@ -204,6 +206,7 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     }
 } */
 
+/* tablet screens */
 @media only screen and (min-width: 415px) and (max-width: 768px) {
     html {
         font-size: 16px;
@@ -211,20 +214,34 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     header {
         grid-template-columns: 1fr 4fr;
     }
-    nav li a {
+    /* nav li a {
         padding: .25rem 1rem;
-    }
+    } */
     section {
         grid-template-columns: 1fr 4fr;
     }
     section .category {
         order: 1;
+    }
+    section .category {
+        order: 1;
+        width: 15vw;
+        height: 100vh;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         text-align: right;
     }
     section .slider {
         order: 2;
+        width: 85vw;
+        height: 100vh;
+    }
+    .slider .item {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .item img {
+        height: 45vh;
     }
     .category h2 {
         transform: rotate(0);
@@ -233,8 +250,23 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     .category h2 {
         transform: rotate(5deg);
     }
+
+
+    section#vests {
+        background-image: radial-gradient(circle at 58% 50%, #1f2535 30%, #26354a 20%, #10141b);
+    }
+    
+    section#cardigans {
+        background-image: radial-gradient(circle at 58% 50%, #7e122a 30%, #9c203a 20%, #4e0916);
+        /* background-image: radial-gradient(circle at 58%, #1c2e4a 20%, #23395d 20%, #203354); */
+    }
+    
+    section#watches {
+        background-image: radial-gradient(circle at 58% 50%, #265c77 30%, #2b7ba0 20%, #113344);
+    }   
 }
 
+/* desktop screens */
 @media only screen and (min-width: 769px) {
     html {
         font-size: 18px;
@@ -242,6 +274,7 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     header {
         grid-template-columns: 1fr 4fr;
     }
+    
     section {
         grid-template-columns: 1fr 3fr;
     }
@@ -255,8 +288,12 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
         width: 85vw;
         height: 100vh;
     }
+    .slider .item {
+        padding-top: 0;
+        padding-bottom: 10%;
+    }
     .item img {
-        max-height: 50%;
+        height: 50vh;
     }
     section .category {
         order: 1;
@@ -271,18 +308,15 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     
 
     section#vests {
-        background-image: radial-gradient(circle at 60% 60%, #1f2535 25%, #26354a 20%, #10141b);
+        background-image: radial-gradient(circle at 58% 50%, #1f2535 22%, #26354a 20%, #10141b);
     }
-    section#vests .category {background-color: #1f2535;}
     
     section#cardigans {
-        background-image: radial-gradient(circle at 60% 60%, #7e122a 25%, #9c203a 20%, #4e0916);
-        /* background-image: radial-gradient(circle at 60%, #1c2e4a 20%, #23395d 20%, #203354); */
+        background-image: radial-gradient(circle at 58% 50%, #7e122a 22%, #9c203a 20%, #4e0916);
+        /* background-image: radial-gradient(circle at 58%, #1c2e4a 20%, #23395d 20%, #203354); */
     }
-    section#cardigans .category {background-color: #7e122a;}
     
     section#watches {
-        background-image: radial-gradient(circle at 60% 60%, #265c77 25%, #2b7ba0 20%, #113344);
+        background-image: radial-gradient(circle at 58% 50%, #265c77 22%, #2b7ba0 20%, #113344);
     }
-    section#watches .category {background-color: #265c77;}
 }
