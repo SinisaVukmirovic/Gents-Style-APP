@@ -53,7 +53,7 @@ header {
             padding: 1rem;
         }
             a:hover {
-                background-color: red;
+                background-color: goldenrod;
             }
 
 main {
@@ -134,6 +134,10 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
         transform: rotate(180deg);
         text-align: right; */
         text-align: center;
+        
+        color: goldenrod;
+        outline: 2px solid goldenrod;
+        outline-offset: -1rem;
 
         /* background-color: #d90429; */
         z-index: 11;
@@ -178,7 +182,8 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
         }
             .item img {
                 height: 40vh;
-                transition: transform 200ms ease-in-out;
+                /* box-shadow: 0 50px 50px -50px #000; */
+                transition: transform 400ms ease-in-out;
             }
             .slider.grabbed {
                 cursor: grabbing;
@@ -245,11 +250,11 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     }
     .category h2 {
         transform: rotate(0);
-        font-size: 3rem;
+        /* font-size: 3rem; */
     }
-    .category h2 {
+    /* .category h2 {
         transform: rotate(5deg);
-    }
+    } */
 
 
     section#vests {
@@ -281,7 +286,13 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     section .category {
         order: 1;
         width: 15vw;
-        height: 100vh;
+        height: 85vh;
+        margin: 10vh 0 0 2rem;
+        /* margin-left: 2rem; */
+        font-size: 10rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        /* text-align: right; */
     }
     section .slider {
         order: 2;
@@ -295,28 +306,24 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     .item img {
         height: 50vh;
     }
-    section .category {
-        order: 1;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        text-align: right;
-    }
-    .category h2 {
+    /* section .category {
+    } */
+    /* .category h2 {
         transform: rotate(10deg);
-    }
+    } */
 
     
 
     section#vests {
-        background-image: radial-gradient(circle at 58% 50%, #1f2535 22%, #26354a 20%, #10141b);
+        background-image: radial-gradient(circle at 60% 50%, #1f2535 22%, #26354a 20%, #10141b);
     }
     
     section#cardigans {
-        background-image: radial-gradient(circle at 58% 50%, #7e122a 22%, #9c203a 20%, #4e0916);
-        /* background-image: radial-gradient(circle at 58%, #1c2e4a 20%, #23395d 20%, #203354); */
+        background-image: radial-gradient(circle at 60% 50%, #7e122a 22%, #9c203a 20%, #4e0916);
+        /* background-image: radial-gradient(circle at 60%, #1c2e4a 20%, #23395d 20%, #203354); */
     }
     
     section#watches {
-        background-image: radial-gradient(circle at 58% 50%, #265c77 22%, #2b7ba0 20%, #113344);
+        background-image: radial-gradient(circle at 60% 50%, #265c77 22%, #2b7ba0 20%, #113344);
     }
 }
