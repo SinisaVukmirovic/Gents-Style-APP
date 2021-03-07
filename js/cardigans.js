@@ -54,6 +54,19 @@ const touchEndCardigan = () => {
     setPositionByIndexCardigan();
     
     sliderCardigans.classList.remove('grabbed');
+
+
+
+
+    // TO DO - make this for arrows
+    console.log(currentSlideCardigan)
+    if (currentSlideCardigan === 2) {
+        document.querySelector('#cardigans .category').classList.add('lime')
+    } else {
+
+        document.querySelector('#cardigans .category').classList.remove('lime')
+    }
+
 }
 
 const setPositionByIndexCardigan = () => {

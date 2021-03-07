@@ -48,7 +48,8 @@ header {
     }
         li a {
             text-decoration: none;
-            color: inherit;
+            color: goldenrod;
+            font-size: .8rem;
             display: block;
             padding: 1rem;
         }
@@ -117,7 +118,7 @@ section#watches {background-image: radial-gradient(circle, #263c41 10rem, #263c4
     section:nth-child(1) .slider {background-color: darkcyan; opacity: .7;}
     section:nth-child(2) .slider {background-color: purple; opacity: .7;}
     section:nth-child(3) .slider {background-color: royalblue; opacity: .7;} */
-
+#cardigans .category.lime {color: lime !important}
     section .category {
         width: 100vw;
 
