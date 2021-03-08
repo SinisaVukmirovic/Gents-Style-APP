@@ -4,11 +4,3 @@
     font-family: Tangerine, cursive;
     font-size: 8rem;
 }
-
-
-
-@media screen and (max-width: 414px) {
-    .category h2 {
-        font-size: 4rem;
-    }
-}

@@ -1,0 +1,88 @@
+header {
+    position: fixed;
+    top: 0;
+    background-color: var(--nav-bg-clr);
+    z-index: 111;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+    h1 {
+        font-family: 'Tangerine', cursive;
+        word-spacing: -5px;
+        font-weight: 400;
+        color: var(--light-text-clr);
+    }
+        h1 span {
+            font-weight: 700;
+            color: var(--light-text-clr);
+        }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        li a {
+            display: block;
+            text-decoration: none;
+            color: var(--theme-clr);
+            font-size: 1rem;
+            padding: 1rem;
+            transition: all 200ms ease-in-out;
+        }
+            a:hover {
+                color: var(--dark-text-clr);
+                background-color: var(--theme-clr);
+            }
+
+section .category {
+    width: 100vw;
+    height: 15vh;
+    order: 2;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    color: var(--theme-clr);
+    outline: 2px solid var(--theme-clr);
+    outline-offset: -1rem;
+}
+    .category h2 {
+        font-size: 4rem;
+    }
+
+section .slider {
+    width: 100vw;
+    height: 85vh;
+    order: 1;
+    display: inline-flex;
+    transform: translateX(0);
+    transition: transform 600ms ease-in-out;
+    cursor: grab;      
+}
+    .slider .item {
+        min-width: 100%;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20%; 
+        user-select: none;
+    }
+        .item img {
+            height: 40vh;
+            transition: transform 400ms ease-in-out;
+        }
+        .slider.grabbed {
+            cursor: grabbing;
+        }
+        .slider.grabbed img {
+            transform: scale(.95);
+        }

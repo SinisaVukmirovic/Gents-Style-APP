@@ -1,0 +1,60 @@
+:root {
+    --theme-clr: goldenrod;
+    --light-text-clr: #fff;
+    --dark-text-clr: #000;
+    --nav-bg-clr: #222;
+}
+
+section#vests {
+    background-image: radial-gradient(circle at 50% 55%, 
+    #1f2535 35%, #26354a 20%, #10141b);
+}
+section#vests .category {background-color: #1f2535;}
+
+section#cardigans {
+    background-image: radial-gradient(circle at 50% 55%, 
+    #7e122a 35%, #9c203a 20%, #4e0916);
+}
+section#cardigans .category {background-color: #7e122a;}
+
+section#watches {
+    background-image: radial-gradient(circle at 50% 55%, 
+    #265c77 35%, #2b7ba0 20%, #113344);
+}
+section#watches .category {background-color: #265c77;}
+
+/* tablet screens */
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+    section#vests {
+        background-image: radial-gradient(circle at 58% 50%, 
+        #1f2535 30%, #26354a 20%, #10141b);
+    }
+    
+    section#cardigans {
+        background-image: radial-gradient(circle at 58% 50%, 
+        #7e122a 30%, #9c203a 20%, #4e0916);
+    }
+    
+    section#watches {
+        background-image: radial-gradient(circle at 58% 50%, 
+        #265c77 30%, #2b7ba0 20%, #113344);
+    } 
+}
+
+/* desktop screens */
+@media only screen and (min-width: 769px) {
+    section#vests {
+        background-image: radial-gradient(circle at 60% 50%, 
+        #1f2535 22%, #26354a 20%, #10141b);
+    }
+    
+    section#cardigans {
+        background-image: radial-gradient(circle at 60% 50%, 
+        #7e122a 22%, #9c203a 20%, #4e0916);
+    }
+    
+    section#watches {
+        background-image: radial-gradient(circle at 60% 50%, 
+        #265c77 22%, #2b7ba0 20%, #113344);
+    }
+}
