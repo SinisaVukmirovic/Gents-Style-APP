@@ -41,6 +41,22 @@ header {
                 background-color: var(--theme-clr);
             }
 
+section {
+    grid-template-columns: 1fr;
+    position: relative;
+}
+section #left, 
+section #right {
+    position: fixed;
+    top: 50vh;
+}
+    section #left {
+        left: 0;
+    }
+    section #right {
+        right: 0;
+    }
+
 section .category {
     width: 100vw;
     height: 15vh;
@@ -65,7 +81,8 @@ section .slider {
     display: inline-flex;
     transform: translateX(0);
     transition: transform 600ms ease-in-out;
-    cursor: grab;      
+    cursor: grab;   
+    position: relative;  
 }
     .slider .item {
         min-width: 100%;

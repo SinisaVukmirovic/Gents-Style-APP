@@ -57,13 +57,11 @@ const touchEndCardigan = () => {
 
 
 
-
     // TO DO - make this for arrows
-    console.log(currentSlideCardigan)
-    if (currentSlideCardigan === 2) {
+    console.log(cardiganItems.length)
+    if (currentSlideCardigan === 0) {
         document.querySelector('#cardigans .category').classList.add('lime')
     } else {
-
         document.querySelector('#cardigans .category').classList.remove('lime')
     }
 

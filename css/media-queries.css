@@ -50,6 +50,14 @@
     section {
         grid-template-columns: 1fr 3fr;
     }
+        section #left {
+            left: 25vw;
+            height: 3rem;
+        }
+        section #right {
+            right: 10vw;
+            height: 3rem;
+        }
         section .category {
             order: 1;
             width: 15vw;
@@ -62,7 +70,7 @@
 
         section .slider {
             order: 2;
-            width: 85vw;
+            width: 80vw;
             height: 100vh;
         }
             .slider .item {
