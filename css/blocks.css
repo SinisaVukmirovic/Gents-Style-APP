@@ -45,15 +45,17 @@ section {
     grid-template-columns: 1fr;
     position: relative;
 }
-section #left, 
-section #right {
-    position: fixed;
+section .pointer-left, 
+section .pointer-right {
+    position: absolute;
     top: 50vh;
+    height: 2rem;
 }
-    section #left {
+    section .pointer-left {
         left: 0;
+        
     }
-    section #right {
+    section .pointer-right {
         right: 0;
     }
 

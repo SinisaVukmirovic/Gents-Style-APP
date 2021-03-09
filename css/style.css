@@ -15,4 +15,4 @@ body {
     height: 100vh;
 }
 
-#cardigans .category.lime {color: lime !important}
+#cardigans .pointer-left.lime {border: 2px solid lime;}
