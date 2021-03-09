@@ -1,10 +1,4 @@
-// const app2 = document.querySelector('.app');
 const sliderCardigans = document.querySelector('#cardigans .slider');
-// const items = [
-//     Array.from(app.querySelectorAll('#vests .slider .item')),
-//     Array.from(app.querySelectorAll('#cardigans .slider .item')),
-//     Array.from(app.querySelectorAll('#watches .slider .item')),
-// ];
 const cardiganItems = sliderCardigans.querySelectorAll('.item');
 
 let isDraggedCardigan = false;
@@ -52,19 +46,10 @@ const touchEndCardigan = () => {
     if (movedBy > 100 && currentSlideCardigan > 0) currentSlideCardigan -= 1;
 
     setPositionByIndexCardigan();
+
+    pointerDisplayCardigans(currentSlideCardigan);
     
     sliderCardigans.classList.remove('grabbed');
-
-
-
-    // TO DO - make this for arrows
-    console.log(cardiganItems.length)
-    if (currentSlideCardigan === 2) {
-        document.querySelector('#cardigans .pointer-left').classList.add('lime')
-    } else {
-        document.querySelector('#cardigans .pointer-left').classList.remove('lime')
-    }
-
 }
 
 const setPositionByIndexCardigan = () => {
@@ -73,6 +58,20 @@ const setPositionByIndexCardigan = () => {
     previousTranslateCardigan = currentTranslateCardigan;
 
     setSliderPositionCardigan();
+}
+
+const pointerDisplayCardigans = (currentItem) => {
+    if (currentItem === 0) {
+        document.querySelector('#cardigans .pointer-left').classList.add('hide');
+    } else {
+        document.querySelector('#cardigans .pointer-left').classList.remove('hide');
+    }
+
+    if (currentItem === cardiganItems.length - 1) {
+        document.querySelector('#cardigans .pointer-right').classList.add('hide');
+    } else {
+        document.querySelector('#cardigans .pointer-right').classList.remove('hide');
+    }
 }
 
 const touchMoveCardigan = event => {
@@ -104,5 +103,3 @@ window.oncontextmenu = function(e) {
     e.stopPropagation();
     return false;
 }
-
-// export const bbooddyy = document.querySelector('body');

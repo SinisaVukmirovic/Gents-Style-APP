@@ -46,6 +46,8 @@ const touchEndWatches = () => {
     if (movedBy > 100 && currentSlideWatches > 0) currentSlideWatches -= 1;
 
     setPositionByIndexWatches();
+
+    pointerDisplayWatches(currentSlideWatches);
     
     sliderWatches.classList.remove('grabbed');
 }
@@ -56,6 +58,20 @@ const setPositionByIndexWatches = () => {
     previousTranslateWatches = currentTranslateWatches;
 
     setSliderPositionWatches();
+}
+
+const pointerDisplayWatches = (currentItem) => {
+    if (currentItem === 0) {
+        document.querySelector('#watches .pointer-left').classList.add('hide');
+    } else {
+        document.querySelector('#watches .pointer-left').classList.remove('hide');
+    }
+
+    if (currentItem === watchesItems.length - 1) {
+        document.querySelector('#watches .pointer-right').classList.add('hide');
+    } else {
+        document.querySelector('#watches .pointer-right').classList.remove('hide');
+    }
 }
 
 const touchMoveWatches = event => {

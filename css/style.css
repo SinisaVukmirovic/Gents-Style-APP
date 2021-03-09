@@ -15,4 +15,5 @@ body {
     height: 100vh;
 }
 
-#cardigans .pointer-left.lime {border: 2px solid lime;}
+section .pointer-left.hide {visibility: hidden;}
+section .pointer-right.hide {visibility: hidden;}

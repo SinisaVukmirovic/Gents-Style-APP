@@ -1,7 +1,3 @@
-// import { bbooddyy } from './cards.js';
-
-// console.log(bbooddyy);
-
 const sliderVests = document.querySelector('#vests .slider');
 const vestsItems = sliderVests.querySelectorAll('.item');
 
@@ -50,6 +46,8 @@ const touchEndVests = () => {
     if (movedBy > 100 && currentSlideVests > 0) currentSlideVests -= 1;
 
     setPositionByIndexVests();
+
+    pointerDisplayVests(currentSlideVests);
     
     sliderVests.classList.remove('grabbed');
 }
@@ -60,6 +58,20 @@ const setPositionByIndexVests = () => {
     previousTranslateVests = currentTranslateVests;
 
     setSliderPositionVests();
+}
+
+const pointerDisplayVests = (currentItem) => {
+    if (currentItem === 0) {
+        document.querySelector('#vests .pointer-left').classList.add('hide');
+    } else {
+        document.querySelector('#vests .pointer-left').classList.remove('hide');
+    }
+
+    if (currentItem === vestsItems.length - 1) {
+        document.querySelector('#vests .pointer-right').classList.add('hide');
+    } else {
+        document.querySelector('#vests .pointer-right').classList.remove('hide');
+    }
 }
 
 const touchMoveVests = event => {
