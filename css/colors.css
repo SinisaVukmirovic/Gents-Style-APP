@@ -44,17 +44,17 @@ section#watches .category {background-color: #265c77;}
 /* desktop screens */
 @media only screen and (min-width: 769px) {
     section#vests {
-        background-image: radial-gradient(circle at 60% 60%, 
+        background-image: radial-gradient(circle at 60% 50%, 
         #1f2535 25%, #26354a 20%, #10141b);
     }
     
     section#cardigans {
-        background-image: radial-gradient(circle at 60% 60%, 
+        background-image: radial-gradient(circle at 60% 50%, 
         #7e122a 25%, #9c203a 20%, #4e0916);
     }
     
     section#watches {
-        background-image: radial-gradient(circle at 60% 60%, 
+        background-image: radial-gradient(circle at 60% 50%, 
         #265c77 25%, #2b7ba0 20%, #113344);
     }
 }

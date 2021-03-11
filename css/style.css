@@ -13,7 +13,25 @@ body {
     overflow: hidden;
     font-family: sans-serif;
     height: 100vh;
+    position: relative;
 }
 
 section .pointer-left.hide {visibility: hidden;}
 section .pointer-right.hide {visibility: hidden;}
+
+
+.landscape-mode {
+    display: none;
+    position: absolute;
+    z-index: 1111;
+    background-color: #222;
+    color: var(--theme-clr);
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+@media only screen and (max-height: 414px) {
+    .landscape-mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
