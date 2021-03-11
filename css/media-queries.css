@@ -5,7 +5,7 @@
     }
 
     header {
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     section {
@@ -20,14 +20,15 @@
         section .category {
             order: 1;
             width: 15vw;
-            height: 100vh;
+            height: 85vh;
+            margin: 10vh 0 0 2rem;
             writing-mode: vertical-rl;
             transform: rotate(180deg);
             text-align: right;
         }
             .category h2 {
                 transform: rotate(0);
-                /* font-size: 3rem; */
+                font-size: 5rem;
             }
         section .slider {
             order: 2;
@@ -44,14 +45,22 @@
 }
 
 /* desktop screens */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     html {
         font-size: 18px;
     }
 
     header {
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 1fr;
+        justify-content: flex-end;
     }
+        h1 {
+            font-size: 4rem;
+        }
+        li a {
+            font-size: 1.25rem;
+            padding: 1rem;
+        }
     
     section {
         grid-template-columns: 1fr 3fr;
@@ -65,12 +74,70 @@
         section .category {
             order: 1;
             width: 15vw;
-            height: 85vh;
-            margin: 10vh 0 0 2rem;
-            font-size: 10rem;
+            height: 80vh;
+            margin: 15vh 0 0 2rem;
             writing-mode: vertical-rl;
             transform: rotate(180deg);
         }
+            .category h2 {
+                font-size: 6rem;
+            }
+
+        section .slider {
+            order: 2;
+            width: 80vw;
+            height: 100vh;
+        }
+            .slider .item {
+                padding-top: 10%;
+                padding-bottom: 5%;
+            }
+                .item img {
+                    height: 50vh;
+                }
+}
+
+/* specific widths */
+@media only screen and (min-width: 1025px) {
+    html {
+        font-size: 20px;
+    }
+
+    header {
+        grid-template-columns: 1fr 1fr;
+        justify-content: flex-end;
+    }
+        h1 {
+            font-size: 4rem;
+        }
+
+        li a {
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+    
+    section {
+        grid-template-columns: 1fr 3fr;
+    }
+        section .pointer-left {
+            left: 25vw;
+            height: 3rem;
+        }
+        section .pointer-right {
+            right: 10vw;
+            height: 3rem;
+        }
+        section .category {
+            order: 1;
+            width: 15vw;
+            height: 85vh;
+            margin: 10vh 0 0 2rem;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+            .category h2 {
+                font-size: 6rem;
+            }
 
         section .slider {
             order: 2;
@@ -82,6 +149,6 @@
                 padding-bottom: 10%;
             }
                 .item img {
-                    height: 40vh;
+                    height: 50vh;
                 }
 }
