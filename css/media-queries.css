@@ -146,9 +146,9 @@
         }
             .slider .item {
                 padding-top: 0;
-                padding-bottom: 10%;
+                padding-bottom: 5%;
             }
                 .item img {
-                    height: 50vh;
+                    height: 55vh;
                 }
 }

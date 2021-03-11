@@ -19,15 +19,23 @@ body {
 section .pointer-left.hide {visibility: hidden;}
 section .pointer-right.hide {visibility: hidden;}
 
-
 .landscape-mode {
     display: none;
     position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
     z-index: 1111;
     background-color: #222;
     color: var(--theme-clr);
-    top: 0; bottom: 0; left: 0; right: 0;
+    outline: .25rem solid var(--theme-clr);
+    outline-offset: -2rem;
 }
+    .landscape-mode p {
+        color: var(--theme-clr);
+        color: var(--theme-clr);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: center;
+    }
 @media only screen and (max-height: 414px) {
     .landscape-mode {
         display: flex;
