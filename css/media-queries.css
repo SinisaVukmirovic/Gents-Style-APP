@@ -106,10 +106,14 @@
     header {
         grid-template-columns: 1fr 1fr;
         justify-content: flex-end;
+        padding: .5rem;
     }
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
         }
+            h1 .logo {
+                height: 4rem;
+            }
 
         li a {
             font-size: 1.5rem;
@@ -130,8 +134,8 @@
         section .category {
             order: 1;
             width: 15vw;
-            height: 85vh;
-            margin: 10vh 0 0 2rem;
+            height: 80vh;
+            margin: 15vh 0 0 2rem;
             writing-mode: vertical-rl;
             transform: rotate(180deg);
         }
