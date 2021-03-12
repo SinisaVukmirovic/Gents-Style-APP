@@ -29,7 +29,6 @@ const getPositionXWatches = event => {
 
 const slideAnimationWatches = () => {
     setSliderPositionWatches();
-    // calling function reqursively
     if (isDraggedWatches) requestAnimationFrame(slideAnimationWatches);
 }
 
@@ -86,12 +85,10 @@ watchesItems.forEach((item, index) => {
     const slideImage = item.querySelector('img');
     slideImage.addEventListener('dragstart', e => e.preventDefault());
 
-    // Touch events
     item.addEventListener('touchstart', touchStartWatches(index));
     item.addEventListener('touchend', touchEndWatches);
     item.addEventListener('touchmove', touchMoveWatches);
 
-    // Mouse events
     item.addEventListener('mousedown', touchStartWatches(index));
     item.addEventListener('mouseup', touchEndWatches);
     item.addEventListener('mouseleave', touchEndWatches);

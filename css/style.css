@@ -36,6 +36,7 @@ section .pointer-right.hide {visibility: hidden;}
         font-size: 1.5rem;
         text-align: center;
     }
+    
 @media only screen and (max-height: 414px) {
     .landscape-mode {
         display: flex;

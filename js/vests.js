@@ -29,7 +29,6 @@ const getPositionXVests = event => {
 
 const slideAnimationVests = () => {
     setSliderPositionVests();
-    // calling function reqursively
     if (isDraggedVests) requestAnimationFrame(slideAnimationVests);
 }
 
@@ -82,16 +81,14 @@ const touchMoveVests = event => {
 }
 
 vestsItems.forEach((item, index) => {
-    // preventing the default behavious of click and drag an image
     const slideImage = item.querySelector('img');
+    // preventing the default behavious of click and drag an image
     slideImage.addEventListener('dragstart', e => e.preventDefault());
 
-    // Touch events
     item.addEventListener('touchstart', touchStartVests(index));
     item.addEventListener('touchend', touchEndVests);
     item.addEventListener('touchmove', touchMoveVests);
 
-    // Mouse events
     item.addEventListener('mousedown', touchStartVests(index));
     item.addEventListener('mouseup', touchEndVests);
     item.addEventListener('mouseleave', touchEndVests);

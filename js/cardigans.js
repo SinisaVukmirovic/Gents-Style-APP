@@ -29,7 +29,6 @@ const getPositionXCardigan = event => {
 
 const slideAnimationCardigan = () => {
     setSliderPositionCardigan();
-    // calling function reqursively
     if (isDraggedCardigan) requestAnimationFrame(slideAnimationCardigan);
 }
 
@@ -82,16 +81,14 @@ const touchMoveCardigan = event => {
 }
 
 cardiganItems.forEach((item, index) => {
-    // preventing the default behavious of click and drag an image
     const slideImage = item.querySelector('img');
+    // preventing the default behavious of click and drag an image
     slideImage.addEventListener('dragstart', e => e.preventDefault());
 
-    // Touch events
     item.addEventListener('touchstart', touchStartCardigan(index));
     item.addEventListener('touchend', touchEndCardigan);
     item.addEventListener('touchmove', touchMoveCardigan);
 
-    // Mouse events
     item.addEventListener('mousedown', touchStartCardigan(index));
     item.addEventListener('mouseup', touchEndCardigan);
     item.addEventListener('mouseleave', touchEndCardigan);
