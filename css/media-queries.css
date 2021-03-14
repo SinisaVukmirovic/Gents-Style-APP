@@ -156,3 +156,20 @@
                     height: 55vh;
                 }
 }
+
+/* custom scrollbars */
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    background: var(--nav-bg-clr);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--theme-clr);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-text-clr); 
+}
