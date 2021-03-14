@@ -68,8 +68,10 @@ section .pointer-right {
     }
 
 section .category {
-    width: 100vw;
+    width: 90vw;
     height: 15vh;
+    margin: 0 auto;
+    transform: translateY(-1.5rem);
     order: 2;
     z-index: 11;
     display: flex;
