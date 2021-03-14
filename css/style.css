@@ -16,18 +16,51 @@ body {
     position: relative;
 }
 
+/* some app assets elements */
 section .pointer-left.hide {visibility: hidden;}
 section .pointer-right.hide {visibility: hidden;}
 
+.intro-screen,
 .landscape-mode {
-    display: none;
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    z-index: 1111;
-    background-color: #222;
+    background-color: var(--nav-bg-clr);
     color: var(--theme-clr);
     outline: .25rem solid var(--theme-clr);
     outline-offset: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .intro-screen .intro-logo {
+        height: 30vh;
+        filter: drop-shadow(3px 0 #000)
+                drop-shadow(0 3px #000)
+                drop-shadow(-3px 0 #000)
+                drop-shadow(0 -3px #000);
+    }
+
+.intro-screen {
+    z-index: 1111;
+    animation: fade-out 4s linear forwards;
+}
+.intro-screen.js-fade-out {
+    display: none;
+}
+    @keyframes fade-out {
+        70% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+.landscape-mode {
+    display: none;
+    z-index: 1000;
 }
     .landscape-mode p {
         color: var(--theme-clr);
@@ -35,7 +68,7 @@ section .pointer-right.hide {visibility: hidden;}
         text-transform: uppercase;
         font-size: 1.5rem;
         text-align: center;
-    }
+    }    
     
 @media only screen and (max-height: 414px) {
     .landscape-mode {

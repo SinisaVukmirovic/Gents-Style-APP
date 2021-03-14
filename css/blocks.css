@@ -56,6 +56,9 @@ section .pointer-right {
     top: 50vh;
     height: 2rem;
 }
+    .pointer-left {
+        transform: rotate(180deg);
+    }
     section .pointer-left {
         left: 0;
         
